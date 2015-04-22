@@ -2,7 +2,6 @@
  * Global variable contains the app.
  * @module RCAM
  */
-
 var RCAM = RCAM || {};
 
 /**

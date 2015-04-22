@@ -75,7 +75,7 @@ RCAM.widgets.HeaderPanel = (function (global) {
             dropShadow : false,
 
             /**
-             * Optional key/value and value to indicate the animation direction for the panel.
+             * Optional key/value to indicate the animation direction for the panel.
              * Permitted values are: 'topToBottom', 'leftToRight', 'rightToLeft'.
              * @property options.direction
              * @type String
@@ -160,13 +160,9 @@ RCAM.widgets.HeaderPanel = (function (global) {
 
             if (e.animationName === 'panelHide') {
 
-                if (this.options.direction === 'topToBottom') {
+                if (this.options.direction === 'topToBottom' || this.options.direction === 'bottomToTop') {
                     this.headerPanel.style.cssText += param.cssVendorPref + 'transform: translateY(0px)';
-                } else if (this.options.direction === 'bottomToTop') {
-                    this.headerPanel.style.cssText += param.cssVendorPref + 'transform: translateY(0px)';
-                } else if (this.options.direction === 'leftToRight') {
-                    this.headerPanel.style.cssText += param.cssVendorPref + 'transform: translateX(0px)';
-                } else if (this.options.direction === 'rightToLeft') {
+                } else if (this.options.direction === 'leftToRight' || this.options.direction === 'rightToLeft') {
                     this.headerPanel.style.cssText += param.cssVendorPref + 'transform: translateX(0px)';
                 }
 

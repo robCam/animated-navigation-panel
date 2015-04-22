@@ -88,7 +88,7 @@ RCAM.widgets.TextAnimate = (function (global) {
             reversePlayOrder : false,
 
             /**
-             * Optional key/value and value to indicate the animation direction for the text.
+             * Optional key/value to indicate the animation direction for the text.
              * Permitted values are: 'topToBottom', 'leftToRight', 'rightToLeft'.
              * @property options.direction
              * @type String
@@ -120,6 +120,7 @@ RCAM.widgets.TextAnimate = (function (global) {
          * Used to indicate whether the text animation is at its final end state.
          * @property isActive
          * @type boolean
+         * @default false
          */
         this.isActive = false;
 

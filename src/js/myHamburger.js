@@ -75,6 +75,13 @@ RCAM.widgets.Hamburger = (function (global) {
          * @type Object
          */
         this.options = {
+
+            /**
+             * Optional key/value can be used to pass in a callback for when the panel has closed.
+             * @property options.onToggleState
+             * @type Object
+             * @default null
+             */
             onToggleState : null
         };
 
@@ -90,7 +97,7 @@ RCAM.widgets.Hamburger = (function (global) {
 
         /**
          * The DOM node for the activate button.
-         * @property headerTrayContent
+         * @property button
          * @type Object
          */
         this.button = doc.getElementById(buttonId);
@@ -180,7 +187,7 @@ RCAM.widgets.Hamburger = (function (global) {
         },
 
         /**
-         * Called when the header tray completes its animation.
+         * Called when the hamburger menu completes its animation.
          * @method _onTransitionEnd
          * @private
          */
@@ -217,7 +224,7 @@ RCAM.widgets.Hamburger = (function (global) {
 
         /**
          * Toggles the active/non-active button state.
-         * @method toggleTray
+         * @method toggleState
          * @example
              button.toggleState();
          */

@@ -24,7 +24,7 @@ RCAM.widgets = RCAM.widgets || {};
  * @constructor
  * @namespace RCAM.widgets
  * @requires RCAM.utils, RCAM.param
- * @param {Object} el The ID reference for the button element in the DOM.
+ * @param {Object} el The ID reference for the header panel element in the DOM.
  * @param {Object} options The configuration options.
  * @example
         var header = new RCAM.widgets.HeaderPanel('js-main-header__panel', {
@@ -99,6 +99,7 @@ RCAM.widgets.HeaderPanel = (function (global) {
          * Used to indicate the panels active state.
          * @property isActive
          * @type Boolean
+         * @default false
          */
         this.isActive = false;
 
